@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/MPLUS1p-ExtraBold.ttf",
+      "sha1": "0aa6ee65e0b05ad43b8fcfb8cb9456b79d44b481"
+    },
+    {
+      "path": "assets/fonts/Nunito-Bold.ttf",
+      "sha1": "d8091536d0fab37a3239067f708a0221070835da"
+    },
+    {
+      "path": "assets/fonts/Nunito-Light.ttf",
+      "sha1": "c570f483013f57db1a325ae1ddc2e11c115bb441"
+    },
+    {
+      "path": "assets/fonts/PaytoneOne-Regular.ttf",
+      "sha1": "5a2d7fbff111eda7dc7023741752f5c6dc3b1b98"
+    },
+    {
+      "path": "assets/fonts/SVN-Nexa-Rust-Slab-Black-Shadow.ttf",
+      "sha1": "9f82fa9d9d2a2d4cdc56c79538ecd5c85a83c95f"
+    }
+  ]
+}

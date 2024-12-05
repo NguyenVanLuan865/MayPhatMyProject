@@ -1,0 +1,4 @@
+{
+    "name": "OutOfNoodles",
+    "main": "./OutOfNoodles.view.tsx"
+}

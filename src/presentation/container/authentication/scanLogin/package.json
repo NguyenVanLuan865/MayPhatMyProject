@@ -1,0 +1,4 @@
+{
+    "name": "scanLogin",
+    "main": "./scanLogin.view.tsx"
+}
