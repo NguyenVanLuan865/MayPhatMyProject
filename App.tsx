@@ -1,15 +1,19 @@
-import RootNavigation from "./src/presentation/navigation/RootNavigator";
+import RootNavigation from './src/presentation/navigation/RootNavigator';
 import { Provider } from 'react-redux';
-import { store } from './src/presentation/shared-state'
+import { store } from './src/presentation/shared-state';
+import FullScreenLoadingIndicator from "./src/presentation/component/indicator/FullScreenLoadingIndicator";
 const App = () => {
   return (
     <Provider store={store}>
           <RootNavigation />
+          <FullScreenLoadingIndicator/>
     </Provider>
 
   );
 };
 export default App;
+
+//SCREEN UP THÔNG TIN USER
 
 
 // import React, { useState } from 'react';

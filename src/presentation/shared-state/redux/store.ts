@@ -1,5 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { navigationReducer,  userReducer,noodleMachineReducer , loadingReducer} from './reducers'; // Đảm bảo bạn import đúng slice
+import { 
+  navigationReducer,  
+  userReducer,
+  noodleMachineReducer , 
+  loadingReducer,
+  scanQRReducer
+} from './reducers'; 
 import { thunk } from 'redux-thunk';
 export const store = configureStore({
   reducer: {
@@ -7,6 +13,7 @@ export const store = configureStore({
     navigation: navigationReducer,
     noodleMachine: noodleMachineReducer,
     loading: loadingReducer,
+    scanQR: scanQRReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(thunk),

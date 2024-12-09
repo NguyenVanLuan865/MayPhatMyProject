@@ -12,7 +12,7 @@ export const ICON_HEART = require('./icon-heart.png');
 export const ICON_ERROR = require('./icon-error.png');
 export const ICON_EMPTYCUP = require('./icon-emptycup.png');
 export const ICON_UNAVAILABLECUP = require('./icon-unavailablecup.png');
-
+export const ICON_TICKED = require('./icon-ticked.png');
 
 
 

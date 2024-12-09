@@ -6,16 +6,14 @@ import scanLogin from '../container/authentication/scanLogin';
 import Error from '../container/authentication/Error';
 import OutOfNoodle from '../container/authentication/OutOfNoodles';
 import firestore from '@react-native-firebase/firestore';
-import { setRemainingNoodles, setMachineStatus } from '../shared-state/redux/reducers/noodleMachineSlice';
-import { setScreen } from '../shared-state/redux/reducers/navigationSlice';
+import { 
+    setRemainingNoodles, 
+    setMachineStatus, 
+    setScreen  
+} from '../shared-state';
+import { AuthenticationStoryboardParamList } from '../storyboards';
 
-type AuthStackParamList = {
-    scanLogin: undefined;
-    Error: undefined;
-    OutOfNoodle: undefined;
-};
-
-const AuthStack = createNativeStackNavigator<AuthStackParamList>();
+const AuthStack = createNativeStackNavigator<AuthenticationStoryboardParamList>();
 
 const AuthenticationNavigation: React.FC = () => {
     const dispatch = useDispatch();
@@ -42,15 +40,14 @@ const AuthenticationNavigation: React.FC = () => {
                         dispatch(setScreen('login'));
                     }
                 }
-                setIsLoading(false); // Khi đã load xong, bỏ trạng thái loading
+                setIsLoading(false); 
             });
 
-        // Dọn dẹp khi component bị unmount
         return () => unsubscribe();
     }, [dispatch]);
 
     if (isLoading) {
-        return null; // Hoặc có thể trả về một spinner/loading screen
+        return null; 
     }
 
     return (

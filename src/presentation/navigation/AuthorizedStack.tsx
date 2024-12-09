@@ -1,14 +1,10 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Infomation from '../container/authorized/Infomation/Infomation.view';
-import Done from '../container/authorized/Done/Done.view';
+import Infomation from '../container/authorized/Infomation';
+import Done from '../container/authorized/Done';
+import { AuthorizedStoryboardParamList } from '../storyboards';
 
-type AuthStackParamList = {
-    Infomation: undefined;
-    Done: undefined;
-};
-
-const AuthStack = createNativeStackNavigator<AuthStackParamList>();
+const AuthStack = createNativeStackNavigator<AuthorizedStoryboardParamList>();
 
 const AuthorizedNavigation: React.FC = () => {
     return (

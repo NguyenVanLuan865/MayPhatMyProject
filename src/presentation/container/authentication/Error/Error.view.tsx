@@ -1,11 +1,27 @@
-import React, { useState } from 'react';
-import { Image, View, Text, TouchableOpacity, FlatList } from 'react-native';
-import { FlatButton, FrameInfoUser, PrimaryBackground } from '../../../component';
+import React, { useEffect } from 'react';
+import { Image, View, Text} from 'react-native';
+import {PrimaryBackground } from '../../../component';
 import { styles } from './Error.style';
-import { ICON_AREASCAN, ICON_ARROW_BOTTOM, ICON_ARROW_RIGHT, ICON_DONE, ICON_ERROR, ICON_HEART, ICON_SCAN } from '../../../../../assets';
-import QRCode from 'react-native-qrcode-svg';
+import { ICON_AREASCAN, ICON_ARROW_RIGHT, ICON_ERROR, ICON_SCAN } from '../../../../../assets';
+import { useDispatch } from 'react-redux';
+import { setScreen, resetScan } from '../../../shared-state';
+import { useNavigation } from '@react-navigation/native';
+
+
 const Error: React.FC = () => {
-    const userId = 'user123';
+    const dispatch = useDispatch();
+    const navigation = useNavigation();
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            dispatch(setScreen('login'));
+            dispatch(resetScan());
+        }, 5000);
+
+        return () => clearTimeout(timeout); 
+    }, [dispatch, navigation]);
+
+
     return (
         <PrimaryBackground headerText="error">
             <Text style={styles.notification}>

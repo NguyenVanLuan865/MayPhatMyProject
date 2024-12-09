@@ -1,5 +1,5 @@
 export type AuthenticationStoryboardParamList = {
-    scanLogin: { };
-    SignUp: { userName?: string };
-    OutOfNoodle: { };
+    scanLogin: undefined;
+    Error: undefined;
+    OutOfNoodle: undefined;
 };
